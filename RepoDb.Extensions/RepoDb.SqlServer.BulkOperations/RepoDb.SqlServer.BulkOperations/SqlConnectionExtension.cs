@@ -678,14 +678,14 @@ namespace RepoDb
                 .CloseParen();
 
             // Set the output
-            if (isReturnIdentity == true && identityField != null)
-            {
-                builder
-                    .WriteText(string.Concat("OUTPUT INSERTED.", identityField.Name.AsField(dbSetting)))
-                        .As("[Result],")
-                    .WriteText("S.[__RepoDb_OrderColumn]")
-                        .As("[OrderColumn]");
-            }
+            //if (isReturnIdentity == true && identityField != null)
+            //{
+            //    builder
+            //        .WriteText(string.Concat("OUTPUT INSERTED.", identityField.Name.AsField(dbSetting)))
+            //            .As("[Result],")
+            //        .WriteText("S.[__RepoDb_OrderColumn]")
+            //            .As("[OrderColumn]");
+            //}
 
             // End
             builder.End();
@@ -812,14 +812,14 @@ namespace RepoDb
             }
 
             // Set the output
-            if (isReturnIdentity == true && identityField != null)
-            {
-                builder
-                    .WriteText(string.Concat("OUTPUT INSERTED.", identityField.Name.AsField(dbSetting)))
-                        .As("[Result],")
-                    .WriteText("S.[__RepoDb_OrderColumn]")
-                        .As("[OrderColumn]");
-            }
+            //if (isReturnIdentity == true && identityField != null)
+            //{
+            //    builder
+            //        .WriteText(string.Concat("OUTPUT INSERTED.", identityField.Name.AsField(dbSetting)))
+            //            .As("[Result],")
+            //        .WriteText("S.[__RepoDb_OrderColumn]")
+            //            .As("[OrderColumn]");
+            //}
 
             // End the builder
             builder.End();

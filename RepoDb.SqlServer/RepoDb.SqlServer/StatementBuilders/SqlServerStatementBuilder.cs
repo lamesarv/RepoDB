@@ -438,12 +438,12 @@ namespace RepoDb.StatementBuilders
             var keyColumn = GetReturnKeyColumnAsDbField(primaryField, identityField);
 
             // Set the output
-            if (keyColumn != null)
-            {
-                builder
-                    .WriteText(string.Concat("OUTPUT INSERTED.", keyColumn.Name.AsField(DbSetting)))
-                    .As("[Result]");
-            }
+            //if (keyColumn != null)
+            //{
+            //    builder
+            //        .WriteText(string.Concat("OUTPUT INSERTED.", keyColumn.Name.AsField(DbSetting)))
+            //        .As("[Result]");
+            //}
 
             // End the builder
             builder.End();
@@ -584,14 +584,14 @@ namespace RepoDb.StatementBuilders
                     .FieldsAndAliasFieldsFrom(updateableFields, "T", "S", DbSetting);
 
                 // Set the output
-                if (keyColumn != null)
-                {
-                    builder
-                        .WriteText(string.Concat("OUTPUT INSERTED.", keyColumn.Name.AsField(DbSetting)))
-                            .As("[Result],")
-                        .WriteText($"{DbSetting.ParameterPrefix}__RepoDb_OrderColumn_{index}")
-                            .As("[OrderColumn]");
-                }
+                //if (keyColumn != null)
+                //{
+                //    builder
+                //        .WriteText(string.Concat("OUTPUT INSERTED.", keyColumn.Name.AsField(DbSetting)))
+                //            .As("[Result],")
+                //        .WriteText($"{DbSetting.ParameterPrefix}__RepoDb_OrderColumn_{index}")
+                //            .As("[OrderColumn]");
+                //}
 
                 // End the builder
                 builder.End();
